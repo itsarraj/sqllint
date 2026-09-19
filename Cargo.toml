@@ -1,0 +1,24 @@
+[package]
+name = "sqllint"
+version = "0.1.0"
+edition = "2021"
+description = "Lints raw .sql files for real footguns — UPDATE/DELETE with no WHERE, = NULL, NOT IN (subquery), implicit cross joins — no database connection needed"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/sqllint"
+readme = "README.md"
+keywords = ["sql", "lint", "static-analysis", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[lib]
+name = "sqllint"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sqllint"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+regex = "1"
