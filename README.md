@@ -6,6 +6,12 @@ heavily-configurable formatter/linter; this is the opposite end of the
 spectrum: a small, zero-config binary that catches the handful of SQL
 mistakes that actually cause incidents, not style nitpicks.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
